@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "c6d6c17e-6339-4f8f-b15d-97b12d502aab",
+		"name": "Riskguard Postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "risk-guard-otds-correct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic encoded client id and secret"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "encoded",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "encoded",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://na-1-dev.api.opentext.com/tenants/{MY TENANT ID}/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"na-1-dev",
+						"api",
+						"opentext",
+						"com"
+					],
+					"path": [
+						"tenants",
+						"{MY TENANT ID}",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "riskguard-ot2-health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e547e75f-55bc-468a-8857-61962fcbc75f"
+					}
+				],
+				"url": {
+					"raw": "{{baseuri}}/api/management/health/ready",
+					"host": [
+						"{{baseuri}}"
+					],
+					"path": [
+						"api",
+						"management",
+						"health",
+						"ready"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "riskguard-ot2-version",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2a30f0f1-0a86-4ae5-be96-d7cd2e21137d"
+					}
+				],
+				"url": {
+					"raw": "https://na-1-dev.api.opentext.com/mtm-minesweeper/api/v1/version",
+					"protocol": "https",
+					"host": [
+						"na-1-dev",
+						"api",
+						"opentext",
+						"com"
+					],
+					"path": [
+						"mtm-minesweeper",
+						"api",
+						"v1",
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testriskguard-ot2-process",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2bff07e6-8339-4c19-8cd4-88fe2b9c309d"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File",
+							"type": "file",
+							"src": "/C:/Users/folder/Mydocument1.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://na-1-dev.api.opentext.com/mtm-minesweeper/api/v1/process",
+					"protocol": "https",
+					"host": [
+						"na-1-dev",
+						"api",
+						"opentext",
+						"com"
+					],
+					"path": [
+						"mtm-minesweeper",
+						"api",
+						"v1",
+						"process"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
