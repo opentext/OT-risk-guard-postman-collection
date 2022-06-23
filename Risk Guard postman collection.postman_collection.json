@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "c6d6c17e-6339-4f8f-b15d-97b12d502aab",
-		"name": "Riskguard Postman collection",
+		"_postman_id": "ef4eaf5e-6b68-4160-be7f-2439f65acf41",
+		"name": "RiskGuard",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -90,7 +90,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://na-1-dev.api.opentext.com/mtm-minesweeper/api/v1/version",
+					"raw": "https://na-1-dev.api.opentext.com/mtm-riskguard/api/v1/version",
 					"protocol": "https",
 					"host": [
 						"na-1-dev",
@@ -99,7 +99,7 @@
 						"com"
 					],
 					"path": [
-						"mtm-minesweeper",
+						"mtm-riskguard",
 						"api",
 						"v1",
 						"version"
@@ -109,7 +109,7 @@
 			"response": []
 		},
 		{
-			"name": "testriskguard-ot2-process",
+			"name": "riskguard-ot2-process",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -134,7 +134,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://na-1-dev.api.opentext.com/mtm-minesweeper/api/v1/process",
+					"raw": "https://na-1-dev.api.opentext.com/mtm-riskguard/api/v1/process",
 					"protocol": "https",
 					"host": [
 						"na-1-dev",
@@ -143,7 +143,7 @@
 						"com"
 					],
 					"path": [
-						"mtm-minesweeper",
+						"mtm-riskguard",
 						"api",
 						"v1",
 						"process"
